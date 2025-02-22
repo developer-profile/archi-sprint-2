@@ -30,6 +30,7 @@ docker exec -it configSrv mongosh --port 27017
 ```shell
 docker exec -it shard1 mongosh --port 27018
 ```
+
 ```shell
 > rs.initiate(
     {
@@ -42,20 +43,7 @@ docker exec -it shard1 mongosh --port 27018
 
 rs.add({ _id: 1, host: "shard1secondary1:27021" });
 rs.add({ _id: 2, host: "shard1secondary2:27022" });
-
 rs.status()
-
-проверяем что у нас отражаются PRIMARY, и 2 SECONDARY без каких либо ошибок
-
-или может этот вариант, но он не всегда отрабатывает:
-
-> rs.initiate({_id: "rs0", members: [
-{_id: 0, host: "shard1:27018"},
-{_id: 1, host: "shard1secondary1:27021"},
-{_id: 2, host: "shard1secondary2:27022"}
-]});
-
-> exit();
 ```
 
 ```shell
@@ -119,15 +107,3 @@ docker exec -it shard2 mongosh --port 27019
 ```
 
 Получится результат — 508 документов.
-
-## Дополнительно
-
-Полезно будет подключиться к своей шардированной БД при помощи mongodb compass, где в качествестве строки подключения следует указать mongodb://127.0.0.1:27020/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.3.3
-
-Еще имеет смысл зайти на в контейнер с одной из реплик и прочитать количество документов в ее копии БД, чтобы удостовериться, что репликация работает как ожидается.
-
-### Если вы запускаете проект на локальной машине
-
-Откройте в браузере http://localhost:8080 - увидите информацию по текущей топологии бд с которой взаимодействует сервис.
-
-Откройте в браузере http://localhost:8080/helloDoc/count чтобы увидеть количество документов в БД.
