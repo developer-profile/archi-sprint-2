@@ -2,11 +2,11 @@
 
 ## Скрипт запуска с проверками находится в 
 ```
-./task01-sharding/scripts/mongo-init.sh
+./task01-mongo-sharding/scripts/mongo-init.sh
 ```
 ## Скриптe удаления всего что было установлено предыдущим скриптом находится в 
 ```
-./task01-sharding/scripts/mongo-destroy.sh
+./task01-mongo-sharding/scripts/mongo-destroy.sh
 ```
 ## Команды содержащиеся в скрипте инициализации кратко описаны README.md:
 
@@ -19,11 +19,11 @@
 
 ## Скрипт запуска с проверками находится в 
 ```
-./task02-sharding-repl/scripts/mongo-init.sh
+./task02-mongo-sharding-repl/scripts/mongo-init.sh
 ```
 ## Скриптe удаления всего что было установлено предыдущим скриптом находится в 
 ```
-./task02-sharding-repl/scripts/mongo-destroy.sh
+./task02-mongo-sharding-repl/scripts/mongo-destroy.sh
 ```
 ## Команды содержащиеся в скрипте инициализации кратко описаны README.md:
 
@@ -35,11 +35,11 @@
 
 ## Скрипт запуска с проверками находится в 
 ```
-./task03-sharding-repl-cache/scripts/mongo-init.sh
+./task03-mongo-sharding-repl-cache/scripts/mongo-init.sh
 ```
 ## Скриптe удаления всего что было установлено предыдущим скриптом находится в 
 ```
-./task03-sharding-repl-cache/scripts/mongo-destroy.sh
+./task03-mongo-sharding-repl-cache/scripts/mongo-destroy.sh
 ```
 
 ## Команды содержащиеся в скрипте инициализации кратко описаны README.md:
