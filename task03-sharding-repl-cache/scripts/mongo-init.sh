@@ -34,7 +34,7 @@ docker compose -f ../compose.yaml up -d
 # EOF
 
 # Инициализация сервера конфигураций
-echo -e  "\n\n${GREEN}Initializing config server${NC}\n\n"
+echo -e  "\n\n${GREEN}Initializing config server${NC} ${GREEN}TASK03 MONGO SHARDING REPLICATION AND CACHE ${NC}\n\n"
 #
 docker compose exec -T configSrv mongosh --port 27017 --quiet <<EOF
 rs.initiate(
