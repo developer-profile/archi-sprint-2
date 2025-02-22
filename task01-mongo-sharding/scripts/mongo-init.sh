@@ -10,6 +10,7 @@ NC=$(tput sgr0)
 ###
 echo -e "${GREEN}Starting cluster${NC} ${GREEN}TASK01 MONGO SHARDING${NC}\n\n"
 #
+cd ./task01-mongo-sharding/scripts
 docker compose -f ../compose.yaml up -d
 
 
@@ -122,3 +123,4 @@ echo -e "\n\n${GREEN}It's${NC} ${RED}finished!${NC}\n\n"
 #
 echo -e "\n\n${GREEN}To${NC} ${RED}destroy${NC} everything with volumes run ${RED}monga-destroy.sh${NC}\n\n"
 #
+cd ../../
