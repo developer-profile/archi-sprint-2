@@ -10,6 +10,7 @@ NC=$(tput sgr0)
 ###
 echo -e "${GREEN}Starting cluster${NC} ${GREEN}TASK02 MONGO SHARDING REPLICATION${NC}\n\n"
 #
+cd ./task02-mongo-sharding-repl/scripts
 docker compose -f ../compose.yaml up -d
 
 
